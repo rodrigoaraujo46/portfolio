@@ -1,12 +1,14 @@
+import ThemeProvider from './components/theme-provider'
 import './App.css'
+import Intro from './components/intro'
 
 function App() {
     return (
-        <main>
-            <Intro>
-                Hello
+        <ThemeProvider>
+            <main>
                 <Intro />
-        </main>
+            </main>
+        </ThemeProvider>
     )
 }
 
