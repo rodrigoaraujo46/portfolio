@@ -4,8 +4,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer utilities {
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
+
 @theme {
-    --font-pier-sans: "Pier Sans", ui-sans-serif, system-ui, sans-serif,
+    --font-pier-sans: "Pier Sans", "JetBrainsMono Nerd Font Mono", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -72,8 +84,8 @@
     --foreground: #575279;
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
+    --popover: #f2e9e1;
+    --popover-foreground: #575279;
     --primary: oklch(0.205 0 0);
     --primary-foreground: oklch(0.985 0 0);
     --secondary: oklch(0.97 0 0);
@@ -106,8 +118,8 @@
     --foreground: #e0def4;
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
+    --popover: #393552;
+    --popover-foreground: #e0def4;
     --primary: oklch(0.922 0 0);
     --primary-foreground: oklch(0.205 0 0);
     --secondary: oklch(0.269 0 0);
