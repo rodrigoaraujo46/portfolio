@@ -1,17 +1,15 @@
 import type { ReactNode } from "react"
 import { MorphingHover } from "./morphing-hover"
 import ToggleTheme from "./theme-toggle"
-import { FileUserIcon, Github, Linkedin, Mails } from "lucide-react"
-import { SiCss, SiDocker, SiFigma, SiGit, SiGithub, SiGo, SiJavascript, SiKubernetes, SiLeetcode, SiMongodb, SiPostgresql, SiPython, SiReact, SiRedis, SiSqlite, SiTailwindcss, SiTypescript } from "@icons-pack/react-simple-icons"
+import { FileUserIcon, Mails } from "lucide-react"
+//import { SiCss, SiDocker, SiFigma, SiGit, SiGithub, SiGo, SiJavascript, SiKubernetes, SiLeetcode, SiMongodb, SiPostgresql, SiPython, SiReact, SiRedis, SiTailwindcss, SiTypescript } from "@icons-pack/react-simple-icons"
+import { SiGithub, SiLeetcode } from "@icons-pack/react-simple-icons"
 import Link from "./links"
-import {
-    ScrollVelocityContainer,
-    ScrollVelocityRow,
-} from "@/components/ui/scroll-based-velocity";
+import Linkedin from "./linkedin"
 
 function Intro() {
     return (
-        <section className="flex flex-col gap-8 overflow-hidden">
+        <section className="flex flex-col gap-8">
             <div className="flex flex-row h-6 justify-between items-center">
                 <p className="text-md sm:text-xl font-bold">Rodrigo Araújo</p>
                 <ToggleTheme />
@@ -49,6 +47,7 @@ function Intro() {
     )
 }
 
+/*
 <div className="relative flex w-full mt-20 flex-col items-center justify-center overflow-hidden">
     <ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[5rem] font-bold tracking-[-0.02em]">
         <ScrollVelocityRow baseVelocity={10} direction={1}>
@@ -74,6 +73,7 @@ function Intro() {
     <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
 </div>
+*/
 
 function GradientSpan({ children }: { children: ReactNode }) {
     return (
