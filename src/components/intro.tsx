@@ -13,23 +13,23 @@ function Intro() {
     return (
         <section className="flex flex-col gap-8 overflow-hidden">
             <div className="flex flex-row h-6 justify-between items-center">
-                <p className="text-xl font-bold">Rodrigo Araújo</p>
+                <p className="text-md sm:text-xl font-bold">Rodrigo Araújo</p>
                 <ToggleTheme />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,40%)_1fr] gap-10">
                 <img className="rounded-3xl object-center h-[30rem] md:h-full w-full object-cover" src="https://wallpapers.com/images/hd/cool-michael-jordan-smoking-a-cigar-34krtybx095zjfp7.jpg" />
                 <div className="grid text-center md:text-start grid-rows-[auto_auto_auto_auto_1fr] gap-8">
-                    <p className="text-2xl font-bold">👋 Hi, I’m Rodrigo — I turn Caffeine ☕ into</p>
-                    <h1 className="text-7xl font-bold tracking-tight">
+                    <p className="text-lg sm:text-2xl font-bold">👋 Hi, I’m Rodrigo — I turn Caffeine ☕ into</p>
+                    <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
                         <GradientSpan>Full-Stack </GradientSpan>
                         <MorphingHover textNormal="Code" textHover="Bugs" />
                     </h1>
-                    <p className="text-3xl ml-[3px] font-bold">
+                    <p className="text-xl sm:text-3xl ml-[3px] font-bold">
                         Crafting <GradientSpan> fast </GradientSpan>
                         and <GradientSpan> reliable </GradientSpan>
                         apps that ship and scale.
                     </p>
-                    <div className="flex flex-row mt-10 h-8 justify-center md:justify-start gap-5 ml-[4px]">
+                    <div className="flex flex-row mt-10 h-8 justify-center md:justify-start gap-5 md:ml-[4px]">
                         <Link href="https://www.linkedin.com/in/rodrigoaraujo46/" title="Linkedin">
                             <Linkedin className="h-full w-auto" /> </Link>
                         <Link href="https://github.com/rodrigoaraujo46" title="Github">
