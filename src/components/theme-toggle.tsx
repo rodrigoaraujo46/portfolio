@@ -1,28 +1,27 @@
-import { Moon, Sun } from "lucide-react"
-import useTheme from "@/hooks/use-theme"
+import { Moon, Sun } from "lucide-react";
+import useTheme from "@/hooks/use-theme";
 
 function ToggleTheme() {
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme } = useTheme();
 
     const handleClick = () => {
         if (theme !== "dark") {
-            setTheme("dark")
+            setTheme("dark");
         } else {
-            setTheme("light")
+            setTheme("light");
         }
-    }
+    };
 
     return (
-        <button className="relative w-auto h-full"
-            onClick={handleClick} >
-            <Moon
-                className="w-auto h-full scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"
-            />
-            <Sun
-                className="absolute w-auto h-full top-0 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"
-            />
+        <button
+            type="button"
+            className="relative h-full w-auto"
+            onClick={handleClick}
+        >
+            <Moon className="h-full w-auto rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <Sun className="dark:-rotate-90 absolute top-0 h-full w-auto rotate-0 scale-100 transition-all dark:scale-0" />
         </button>
-    )
+    );
 }
 
-export default ToggleTheme
+export default ToggleTheme;

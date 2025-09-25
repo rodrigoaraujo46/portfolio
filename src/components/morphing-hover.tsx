@@ -1,6 +1,4 @@
-"use client";
-
-import { useRef, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useId, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const morphTime = 1;
@@ -22,6 +20,7 @@ export const MorphingHover: React.FC<HoverMorphTextProps> = ({
     const text2Ref = useRef<HTMLSpanElement>(null);
     const animRef = useRef<number | null>(null);
     const progressRef = useRef(0); // 0 = normal, 1 = hover
+    const filterId = useId();
 
     // Initialize text content and styles
     useEffect(() => {
@@ -40,69 +39,72 @@ export const MorphingHover: React.FC<HoverMorphTextProps> = ({
     }, [textNormal, textHover]);
 
     // Morphing function
-    const morph = useCallback((hovering: boolean) => {
-        const text1 = text1Ref.current;
-        const text2 = text2Ref.current;
-        if (!text1 || !text2) return;
+    const morph = useCallback(
+        (hovering: boolean) => {
+            const text1 = text1Ref.current;
+            const text2 = text2Ref.current;
+            if (!text1 || !text2) return;
 
-        const container = text1.parentElement as HTMLElement;
-        container.style.filter = "url(#threshold)";
+            const container = text1.parentElement as HTMLElement;
+            container.style.filter = `url(#${filterId})`;
 
-        const startProgress = progressRef.current;
-        const targetProgress = hovering ? 1 : 0;
-        const direction = targetProgress > startProgress ? 1 : -1;
+            const startProgress = progressRef.current;
+            const targetProgress = hovering ? 1 : 0;
+            const direction = targetProgress > startProgress ? 1 : -1;
 
-        let startTime: number | null = null;
+            let startTime: number | null = null;
 
-        if (animRef.current) cancelAnimationFrame(animRef.current);
+            if (animRef.current) cancelAnimationFrame(animRef.current);
 
-        const animate = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
-            const elapsed = (timestamp - startTime) / 1000;
-            let fraction = startProgress + direction * (elapsed / morphTime);
-            fraction = Math.max(0, Math.min(1, fraction));
-            progressRef.current = fraction;
+            const animate = (timestamp: number) => {
+                if (!startTime) startTime = timestamp;
+                const elapsed = (timestamp - startTime) / 1000;
+                let fraction =
+                    startProgress + direction * (elapsed / morphTime);
+                fraction = Math.max(0, Math.min(1, fraction));
+                progressRef.current = fraction;
 
-            // Update styles
-            const fractionSafe = Math.max(fraction, 0.01);
-            const inverted = 1 - fraction;
+                // Update styles
+                const fractionSafe = Math.max(fraction, 0.01);
+                const inverted = 1 - fraction;
 
-            text2.style.filter = `blur(${Math.min(8 / fractionSafe - 8, 100)}px)`;
-            text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+                text2.style.filter = `blur(${Math.min(8 / fractionSafe - 8, 100)}px)`;
+                text2.style.opacity = `${fraction ** 0.4 * 100}%`;
 
-            text1.style.filter = `blur(${Math.min(8 / Math.max(inverted, 0.01) - 8, 100)}px)`;
-            text1.style.opacity = `${Math.pow(inverted, 0.4) * 100}%`;
+                text1.style.filter = `blur(${Math.min(8 / Math.max(inverted, 0.01) - 8, 100)}px)`;
+                text1.style.opacity = `${inverted ** 0.4 * 100}%`;
 
-            if ((direction === 1 && fraction < targetProgress) || (direction === -1 && fraction > targetProgress)) {
-                animRef.current = requestAnimationFrame(animate);
-            } else {
-                animRef.current = null;
-                progressRef.current = targetProgress;
-                container.style.filter = "none";
-            }
-        };
+                if (
+                    (direction === 1 && fraction < targetProgress) ||
+                    (direction === -1 && fraction > targetProgress)
+                ) {
+                    animRef.current = requestAnimationFrame(animate);
+                } else {
+                    animRef.current = null;
+                    progressRef.current = targetProgress;
+                    container.style.filter = "none";
+                }
+            };
 
-        animRef.current = requestAnimationFrame(animate);
-    }, []);
+            animRef.current = requestAnimationFrame(animate);
+        },
+        [filterId],
+    );
 
     // Render
     return (
-        <span
+        <output
             className={cn("relative inline-block", className)}
             onMouseEnter={() => morph(true)}
             onMouseLeave={() => morph(false)}
         >
-            <span
-                ref={text1Ref}
-            />
-            <span
-                ref={text2Ref}
-                className="absolute inset-0"
-            />
+            <span ref={text1Ref} />
+            <span ref={text2Ref} className="absolute inset-0" />
 
-            <svg id="filters" className="fixed h-0 w-0" preserveAspectRatio="xMidYMid slice">
+            <svg className="fixed h-0 w-0" preserveAspectRatio="xMidYMid slice">
+                <title>Filter</title>
                 <defs>
-                    <filter id="threshold">
+                    <filter id={filterId}>
                         <feColorMatrix
                             in="SourceGraphic"
                             type="matrix"
@@ -114,6 +116,6 @@ export const MorphingHover: React.FC<HoverMorphTextProps> = ({
                     </filter>
                 </defs>
             </svg>
-        </span>
+        </output>
     );
 };

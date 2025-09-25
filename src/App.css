@@ -7,7 +7,8 @@
 }
 
 body {
-    @apply transition-colors duration-300
+    /* biome-ignore lint/suspicious/noUnknownAtRules: <"Tailwind rule"> */
+    @apply transition-colors duration-300;
 }
 
 main {

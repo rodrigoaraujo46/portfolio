@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Pier+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pier+Sans&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* biome-ignore lint/suspicious/noUnknownAtRules: <tailwind rule> */
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
@@ -16,10 +17,12 @@
     }
 }
 
+/* biome-ignore lint/suspicious/noUnknownAtRules: <tailwind rule> */
 @theme {
-    --font-pier-sans: "Pier Sans", "JetBrainsMono Nerd Font Mono", ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol", "Noto Color Emoji";
+    --font-pier-sans:
+        "Pier Sans", "JetBrainsMono Nerd Font Mono", ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
 
     --color-love: #eb6f92;
     --color-gold: #f6c177;
@@ -29,6 +32,7 @@
     --color-iris: #c4a7e7;
 }
 
+/* biome-ignore lint/suspicious/noUnknownAtRules: <tailwind rule> */
 @theme inline {
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
@@ -149,10 +153,12 @@
 
 @layer base {
     * {
+        /* biome-ignore lint/suspicious/noUnknownAtRules: <tailwind rule> */
         @apply border-border outline-ring/50;
     }
 
     body {
+        /* biome-ignore lint/suspicious/noUnknownAtRules: <tailwind rule> */
         @apply bg-background font-pier-sans text-foreground;
     }
 }

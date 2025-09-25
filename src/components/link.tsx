@@ -1,5 +1,5 @@
-import type { AnchorHTMLAttributes } from "react"
-import Tooltip from "./tooltip"
+import type { AnchorHTMLAttributes } from "react";
+import Tooltip from "./tooltip";
 
 function Link({
     children,
@@ -8,18 +8,17 @@ function Link({
     rel = "noopener noreferrer",
     ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
-    return (
-        title === undefined ?
+    return title === undefined ? (
+        <a target={target} rel={rel} {...props}>
+            {children}
+        </a>
+    ) : (
+        <Tooltip tip={title}>
             <a target={target} rel={rel} {...props}>
                 {children}
             </a>
-            :
-            <Tooltip tip={title}>
-                <a target={target} rel={rel} {...props}>
-                    {children}
-                </a>
-            </Tooltip>
-    )
+        </Tooltip>
+    );
 }
 
-export default Link
+export default Link;

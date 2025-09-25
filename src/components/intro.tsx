@@ -1,33 +1,36 @@
-import type { ReactNode } from "react";
-import { MorphingHover } from "./morphing-hover";
-import ToggleTheme from "./theme-toggle";
-import { FileUserIcon, Mails } from "lucide-react";
 import { SiGithub, SiLeetcode } from "@icons-pack/react-simple-icons";
+import { FileUserIcon, Mails } from "lucide-react";
+import type { ReactNode } from "react";
 import Link from "./link";
 import { Linkedin } from "./linkedin";
+import { MorphingHover } from "./morphing-hover";
+import ToggleTheme from "./theme-toggle";
 
 function Intro() {
     return (
         <section className="flex flex-col gap-8">
+            {" "}
             <div className="flex h-6 flex-row items-center justify-between">
-                <p className="text-md font-bold sm:text-xl">Rodrigo Araújo</p>
-                <ToggleTheme />
+                {" "}
+                <p className="font-bold text-md sm:text-xl">Rodrigo Araújo</p>{" "}
+                <ToggleTheme />{" "}
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,40%)_1fr]">
                 <img
+                    alt="Myself"
                     className="h-[30rem] w-full rounded-3xl object-cover object-center md:h-full"
                     src="https://wallpapers.com/images/hd/cool-michael-jordan-smoking-a-cigar-34krtybx095zjfp7.jpg"
                 />
                 <div className="grid grid-rows-[auto_auto_auto_auto_1fr] gap-8 text-center md:text-start">
-                    <p className="text-lg font-bold sm:text-2xl">
+                    <p className="font-bold text-lg sm:text-2xl">
                         {" "}
                         👋 Hi, I’m Rodrigo — I turn Caffeine ☕ into{" "}
                     </p>
-                    <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
+                    <h1 className="font-bold text-5xl tracking-tight sm:text-7xl">
                         <GradientSpan>Full-Stack </GradientSpan>{" "}
                         <MorphingHover textNormal="Code" textHover="Bugs" />
                     </h1>
-                    <p className="ml-[3px] text-xl font-bold sm:text-3xl">
+                    <p className="ml-[3px] font-bold text-xl sm:text-3xl">
                         Crafting <GradientSpan> fast </GradientSpan>
                         and <GradientSpan> reliable </GradientSpan>
                         apps that ship and scale.
@@ -39,7 +42,10 @@ function Intro() {
                         >
                             <Linkedin className="h-full w-auto" />
                         </Link>
-                        <Link href="https://github.com/rodrigoaraujo46" title="Github">
+                        <Link
+                            href="https://github.com/rodrigoaraujo46"
+                            title="Github"
+                        >
                             <SiGithub title="" className="h-full w-auto" />
                         </Link>
                         <Link
@@ -48,7 +54,10 @@ function Intro() {
                         >
                             <SiLeetcode title="" className="h-full w-auto" />
                         </Link>
-                        <Link href="mailto:rodrigo46.dev@gmail.com" title="Email">
+                        <Link
+                            href="mailto:rodrigo46.dev@gmail.com"
+                            title="Email"
+                        >
                             <Mails className="h-full w-auto" />
                         </Link>
                         <Link href="./assets/resume.pdf" title="Resume">
@@ -63,7 +72,7 @@ function Intro() {
 
 function GradientSpan({ children }: { children: ReactNode }) {
     return (
-        <span className="from-rose dark:from-foam to-love dark:to-pine bg-gradient-to-r bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-rose to-love bg-clip-text text-transparent dark:from-foam dark:to-pine">
             {children}
         </span>
     );
