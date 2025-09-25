@@ -13,7 +13,7 @@ function Link({
     return title === undefined ? (
         <a
             className={cn(
-                "transition-transform hover:scale-110 focus:scale-110",
+                "transition-transform hover:scale-110 hover:text-rose focus:scale-110 focus:text-rose dark:focus:text-foam dark:hover:text-foam",
                 className,
             )}
             target={target}
@@ -26,7 +26,7 @@ function Link({
         <Tooltip asChild tip={title}>
             <a
                 className={cn(
-                    "transition-transform hover:scale-110 focus:scale-110",
+                    "transition-transform hover:scale-110 hover:text-rose focus:scale-110 focus:text-rose dark:focus:text-foam dark:hover:text-foam",
                     className,
                 )}
                 target={target}

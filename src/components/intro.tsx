@@ -9,11 +9,9 @@ import ToggleTheme from "./theme-toggle";
 function Intro() {
     return (
         <section className="flex flex-col gap-8">
-            {" "}
             <div className="flex h-6 flex-row items-center justify-between">
-                {" "}
-                <p className="font-bold text-md sm:text-xl">Rodrigo Araújo</p>{" "}
-                <ToggleTheme />{" "}
+                <p className="font-bold text-md sm:text-xl">Rodrigo Araújo</p>
+                <ToggleTheme />
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,40%)_1fr]">
                 <img
@@ -23,11 +21,10 @@ function Intro() {
                 />
                 <div className="grid grid-rows-[auto_auto_auto_auto_1fr] gap-8 text-center md:text-start">
                     <p className="font-bold text-lg sm:text-2xl">
-                        {" "}
-                        👋 Hi, I’m Rodrigo — I turn Caffeine ☕ into{" "}
+                        👋 Hi, I’m Rodrigo — I turn Caffeine ☕ into
                     </p>
                     <h1 className="font-bold text-5xl tracking-tight sm:text-7xl">
-                        <GradientSpan>Full-Stack </GradientSpan>{" "}
+                        <GradientSpan>Full-Stack </GradientSpan>
                         <MorphingHover textNormal="Code" textHover="Bugs" />
                     </h1>
                     <p className="ml-[3px] font-bold text-xl sm:text-3xl">

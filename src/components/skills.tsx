@@ -37,42 +37,42 @@ function Skills() {
                                     <SiJavascript
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="TailwindCSS">
                                     <SiTailwindcss
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="CSS">
                                     <SiCss
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="React">
                                     <SiReact
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="HTML">
                                     <SiHtml5
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="HTMX">
                                     <SiHtmx
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                             </div>
@@ -87,42 +87,42 @@ function Skills() {
                                     <SiGo
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="Python">
                                     <SiPython
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="TypeScript">
                                     <SiTypescript
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="PostgreSQL">
                                     <SiPostgresql
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="MongoDB">
                                     <SiMongodb
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                                 <Tooltip asChild tip="Redis">
                                     <SiRedis
                                         title=""
                                         color="default"
-                                        className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                        className="h-12 w-auto transition-transform hover:scale-110"
                                     />
                                 </Tooltip>
                             </div>
@@ -137,48 +137,48 @@ function Skills() {
                             <Tooltip asChild tip="GitHub">
                                 <SiRefinedgithub
                                     title=""
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                             <Tooltip asChild tip="Git">
                                 <SiGit
                                     title=""
                                     color="default"
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                             <Tooltip asChild tip="Figma">
                                 <SiFigma
                                     title=""
                                     color="default"
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                             <Tooltip asChild tip="Docker">
                                 <SiDocker
                                     title=""
                                     color="default"
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                             <Tooltip asChild tip="Kubernetes">
                                 <SiKubernetes
                                     title=""
                                     color="default"
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                             <Tooltip asChild tip="Neovim">
                                 <SiNeovim
                                     title=""
                                     color="default"
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                             <Tooltip asChild tip="Ngrok">
                                 <SiNgrok
                                     title=""
-                                    className="h-12 w-auto transition-transform hover:scale-110 focus:scale-110"
+                                    className="h-12 w-auto transition-transform hover:scale-110"
                                 />
                             </Tooltip>
                         </div>
