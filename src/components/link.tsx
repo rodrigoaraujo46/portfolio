@@ -12,7 +12,10 @@ function Link({
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
     return title === undefined ? (
         <a
-            className={cn("hover:scale-110 focus:scale-110", className)}
+            className={cn(
+                "transition-transform hover:scale-110 focus:scale-110",
+                className,
+            )}
             target={target}
             rel={rel}
             {...props}
@@ -22,7 +25,10 @@ function Link({
     ) : (
         <Tooltip asChild tip={title}>
             <a
-                className={cn("hover:scale-110 focus:scale-110", className)}
+                className={cn(
+                    "transition-transform hover:scale-110 focus:scale-110",
+                    className,
+                )}
                 target={target}
                 rel={rel}
                 {...props}

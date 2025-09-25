@@ -27,14 +27,7 @@ function Tooltip({
     return (
         <TooltipProvider>
             <TooltipPrimitive.Root data-slot="tooltip" {...props}>
-                <TooltipTrigger
-                    className={
-                        !asChild ? "hover:scale-110 focus:scale-110" : ""
-                    }
-                    asChild={asChild}
-                >
-                    {children}
-                </TooltipTrigger>
+                <TooltipTrigger asChild={asChild}>{children}</TooltipTrigger>
                 <TooltipContent>{tip}</TooltipContent>
             </TooltipPrimitive.Root>
         </TooltipProvider>
