@@ -20,7 +20,7 @@ import {
     SiTypescript,
 } from "@icons-pack/react-simple-icons";
 import Card, { CardContent, CardDescription, CardTitle } from "./card";
-import Tooltip from "./tooltip";
+import Tooltip from "./ui/tooltip";
 
 function Skills() {
     return (
@@ -35,36 +35,42 @@ function Skills() {
                             <div className="flex flex-row flex-wrap gap-x-8 gap-y-10">
                                 <Tooltip tip="JavaScript">
                                     <SiJavascript
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
-                                    />{" "}
+                                    />
                                 </Tooltip>
                                 <Tooltip tip="TailwindCSS">
                                     <SiTailwindcss
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="CSS">
                                     <SiCss
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="React">
                                     <SiReact
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="HTML">
                                     <SiHtml5
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="HTMX">
                                     <SiHtmx
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
@@ -79,36 +85,42 @@ function Skills() {
                             <div className="flex flex-row flex-wrap gap-x-8 gap-y-10">
                                 <Tooltip tip="GO">
                                     <SiGo
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="Python">
                                     <SiPython
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="TypeScript">
                                     <SiTypescript
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="PostgreSQL">
                                     <SiPostgresql
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="MongoDB">
                                     <SiMongodb
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
                                 </Tooltip>
                                 <Tooltip tip="Redis">
                                     <SiRedis
+                                        title=""
                                         color="default"
                                         className="h-12 w-auto"
                                     />
@@ -123,40 +135,48 @@ function Skills() {
                     <CardContent>
                         <div className="flex flex-row flex-wrap gap-x-8 gap-y-10">
                             <Tooltip tip="GitHub">
-                                <SiRefinedgithub className="h-12 w-auto" />
+                                <SiRefinedgithub
+                                    title=""
+                                    className="h-12 w-auto"
+                                />
                             </Tooltip>
                             <Tooltip tip="Git">
                                 <SiGit
+                                    title=""
                                     color="default"
                                     className="h-12 w-auto"
                                 />
                             </Tooltip>
                             <Tooltip tip="Figma">
                                 <SiFigma
+                                    title=""
                                     color="default"
                                     className="h-12 w-auto"
                                 />
                             </Tooltip>
                             <Tooltip tip="Docker">
                                 <SiDocker
+                                    title=""
                                     color="default"
                                     className="h-12 w-auto"
                                 />
                             </Tooltip>
                             <Tooltip tip="Kubernetes">
                                 <SiKubernetes
+                                    title=""
                                     color="default"
                                     className="h-12 w-auto"
                                 />
                             </Tooltip>
                             <Tooltip tip="Neovim">
                                 <SiNeovim
+                                    title=""
                                     color="default"
                                     className="h-12 w-auto"
                                 />
                             </Tooltip>
                             <Tooltip tip="Ngrok">
-                                <SiNgrok className="h-12 w-auto" />
+                                <SiNgrok title="" className="h-12 w-auto" />
                             </Tooltip>
                         </div>
                     </CardContent>

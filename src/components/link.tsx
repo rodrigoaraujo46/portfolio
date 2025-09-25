@@ -1,20 +1,32 @@
 import type { AnchorHTMLAttributes } from "react";
-import Tooltip from "./tooltip";
+import { cn } from "@/lib/utils";
+import Tooltip from "./ui/tooltip";
 
 function Link({
     children,
     title,
+    className,
     target = "_blank",
     rel = "noopener noreferrer",
     ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
     return title === undefined ? (
-        <a target={target} rel={rel} {...props}>
+        <a
+            className={cn("hover:scale-110 focus:scale-110", className)}
+            target={target}
+            rel={rel}
+            {...props}
+        >
             {children}
         </a>
     ) : (
-        <Tooltip tip={title}>
-            <a target={target} rel={rel} {...props}>
+        <Tooltip asChild tip={title}>
+            <a
+                className={cn("hover:scale-110 focus:scale-110", className)}
+                target={target}
+                rel={rel}
+                {...props}
+            >
                 {children}
             </a>
         </Tooltip>
