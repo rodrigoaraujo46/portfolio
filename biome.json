@@ -16,6 +16,14 @@
     "linter": {
         "enabled": true,
         "rules": {
+            "style": {
+                "useComponentExportOnlyModules": {
+                    "level": "error",
+                    "options": {
+                        "allowConstantExport": true
+                    }
+                }
+            },
             "recommended": true,
             "nursery": {
                 "useSortedClasses": {
